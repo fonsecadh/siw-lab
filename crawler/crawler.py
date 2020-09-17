@@ -38,8 +38,7 @@ class Crawler:
         # Comprobar que sea un html        
         if "text/html" in request.headers["content-type"]:
             return request
-        else:
-            return ""
+        return ""
 
     def normalizar_link(url, link):
         if link.startswith("/") or link.startswith("#"):
