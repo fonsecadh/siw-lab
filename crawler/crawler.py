@@ -8,6 +8,7 @@ class Crawler:
     def __init__(self, max_downloads, seconds):
         self.max_downloads = max_downloads
         self.seconds = seconds
+        self.visited_urls = { }
 
     def procesar(self, file):
         txt = open(file, "r")
@@ -19,9 +20,13 @@ class Crawler:
         # Si llegamos al limite de descargas
         if self.max_downloads == 0:
             return
+        # Si no hemos visitado la página
+        if url in self.visited_urls:
+            return
         # Si podemos seguir descargando
         html = descargar(url)
         --self.max_downloads
+        self.visited_urls.append(url)
         time.sleep(seconds)
         # Llamamos a la libreria BeautifulSoup
         soup = BeautifulSoup(html.text, features="html.parser")
