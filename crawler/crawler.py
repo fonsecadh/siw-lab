@@ -20,10 +20,10 @@ class Crawler:
         if self.max_downloads == 0:
             return
         # Si podemos seguir descargando
-        html = requests.get(url)
+        html = descargar(url)
         --self.max_downloads
         time.sleep(seconds)
-        # Llamamos a la librería BeautifulSoup
+        # Llamamos a la libreria BeautifulSoup
         soup = BeautifulSoup(html.text, features="html.parser")
         links = soup.find_all("a", href=True)
         # Procesamos los enlaces encontrados en el html
@@ -33,11 +33,20 @@ class Crawler:
             # Hacemos crawl al link normalizado
             self.crawl(l)
 
+    def descargar(url):
+        request = requests.get(url)
+        # Comprobar que sea un html        
+        if "text/html" in request.headers["content-type"]:
+            return request
+        else:
+            return ""
+
     def normalizar_link(url, link):
         if link.startswith("/") or link.startswith("#"):
-            # Usaremos la librería urlparser
+            # Usaremos la libreria urlparser
             return urljoin(url, link)
         return link
+
 
 
 
