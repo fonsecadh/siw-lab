@@ -13,7 +13,7 @@ class BagOfWords:
     def __len__(self):
         # Devuelve el tamaño del diccionario
         return len(self.values)
-    def __iter(self):
+    def __iter__(self):
         """
             Devuelve un iterador que retorna la clave y el valor
             de los elementos.
