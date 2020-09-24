@@ -1,3 +1,5 @@
+from __future__ import division # Para resultados con decimales
+import string
 
 class BagOfWords:
     def __init__(self, text=None, values=None):
@@ -13,7 +15,7 @@ class BagOfWords:
         return len(self.values)
     def __iter(self):
         """
-            Devuelve un iterador que devuelve la clave y el valor
+            Devuelve un iterador que retorna la clave y el valor
             de los elementos.
         """
         return iter(self.values.viewitems())
@@ -25,6 +27,33 @@ class BagOfWords:
         # Une dos bag-of-words
         unionized_bag = dict(other.values, **self.values)
         return BagOfWords(values=unionized_bag)
+
+def string_to_bag_of_words(text):
+    bag = { }
+    # TODO: Use NLTK
+    return bag
+
+def load_lines(filename):
+    f = open(filename, "r")
+    lines = { }
+    # TODO: Process lines
+    f.close()
+    return lines
+
+def main():
+    texts = load_lines("cran-1400.txt")
+    queries = load_lines("cran-queries.txt")
+    for q in queries:
+        print("Query: " + q)
+        best_text = find_best_text(q, texts, coef_dice)
+        print(" Dice coefficient: " + str(best_text))
+        best_text = find_best_text(q, texts, coef_jaccard)
+        print(" Jaccard coefficient: " + str(best_text))
+        best_text = find_best_text(q, texts, coef_cosine)
+        print(" Cosine coefficient: " + str(best_text))
+        best_text = find_best_text(q, texts, coef_overlapping)
+        print(" Overlapping coefficient: " + str(best_text) + "\n")
+
 
 
 
