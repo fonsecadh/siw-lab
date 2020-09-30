@@ -14,11 +14,12 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 '''
 
 
-import sys, getopt
+import sys
+import getopt
 import requests
 import time
-from bs4 import BeautifulSoup
-from urlparse import urljoin
+import BeautifulSoup
+import urlparse
 
 class Crawler:
     def __init__(self, max_downloads, seconds):
@@ -36,7 +37,7 @@ class Crawler:
         # Si llegamos al limite de descargas
         if self.max_downloads == 0:
             return
-        # Si no hemos visitado la página
+        # Si no hemos visitado la pagina
         if url in self.visited_urls:
             return
         # Si podemos seguir descargando
@@ -71,7 +72,7 @@ class Crawler:
     def normalizar_link(url, link):
         if link.startswith("/") or link.startswith("#"):
             # Usaremos la libreria urlparser
-            return urljoin(url, link)
+            return urlparse.urljoin(url, link)
         return link
 
     def guardar_html(self, soup, html):
@@ -90,7 +91,7 @@ def conseguir_urls(filename):
     return urls
 
 def showHelp():
-    print("Crawler  Copyright (C) 2020  Hugo Fonseca Díaz")
+    print("Crawler  Copyright (C) 2020  Hugo Fonseca Diaz")
     print("This program comes with ABSOLUTELY NO WARRANTY;")
     print("This is free software, and you are welcome to redistribute it")
     print("under certain conditions;")
@@ -131,7 +132,7 @@ def main(argv):
             seconds = int(arg)
 
     # Validamos argumentos
-    if (inputfile == "" or max_files < 1 or seconds < 1):
+    if input_file == "" or max_files < 1 or seconds < 1:
         showHelp()
         sys.exit()
 
