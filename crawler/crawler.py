@@ -17,8 +17,9 @@ import sys
 import getopt
 import requests
 import time
-import BeautifulSoup
+from bs4 import BeautifulSoup
 import urlparse
+import codecs
 
 class Crawler:
     def __init__(self, max_downloads, seconds):
@@ -44,7 +45,9 @@ class Crawler:
         # Comprobamos que es un HTML
         if html == "":
             return
-        --self.max_downloads
+        # Actualizamos el numero de descargas restantes
+        self.max_downloads -= 1
+        print("Files to be downloaded: " + str(self.max_downloads))
         self.visited_urls.append(url)
         # Dormimos el programa
         time.sleep(self.seconds)
@@ -57,9 +60,9 @@ class Crawler:
         # Procesamos los enlaces encontrados en el html
         for l in links:
             # Normalizamos el link
-            l = self.normalizar_link(url, l)
+            link = self.normalizar_link(url, l["href"])
             # Hacemos crawl al link normalizado
-            self.crawl(l)
+            self.crawl(link)
 
     def descargar(self, url):
         request = requests.get(url)
@@ -69,16 +72,16 @@ class Crawler:
         return ""
 
     def normalizar_link(self, url, link):
-        if link.startswith("/") or link.startswith("#"):
+        if link.startswith("/") or link.startswith("#") or link.startswith("../"):
             # Usaremos la libreria urlparser
             return urlparse.urljoin(url, link)
         return link
 
     def guardar_html(self, soup, html):
         # Guardamos el documento html en un fichero
-        file = open(soup.title.string.replace("/", "-") + ".html", "w+")
-        file.write(html)
-        file.close()
+        with codecs.open(soup.title.string.replace("/", "-") + ".html", "w+", encoding="utf-8") as file:
+            file.write(html)
+            file.close()
 
 def conseguir_urls(filename):
     file = open(filename, "r")
@@ -134,6 +137,11 @@ def main(argv):
     if input_file == "" or max_files < 1 or seconds < 1:
         showHelp()
         sys.exit()
+
+    # Mostramos informacion
+    print("Input file: " + input_file)
+    print("Max files to download: " + str(max_files))
+    print("Time to wait between crawls: " + str(seconds))
 
     # Conseguimos las URL del fichero
     urls = conseguir_urls(input_file)
