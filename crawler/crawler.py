@@ -24,7 +24,7 @@ class Crawler:
     def __init__(self, max_downloads, seconds):
         self.max_downloads = max_downloads
         self.seconds = seconds
-        self.visited_urls = { }
+        self.visited_urls = [ ]
 
     def procesar(self, file):
         txt = open(file, "r")
@@ -80,6 +80,15 @@ class Crawler:
         file.write(html)
         file.close()
 
+def conseguir_urls(filename):
+    file = open(filename, "r")
+    lines = file.read().splitlines()
+    urls = [ ]
+    for line in lines:
+        urls.append(line)
+    file.close()
+    return urls
+
 def showHelp():
     print("Crawler  Copyright (C) 2020  Hugo Fonseca Díaz")
     print("This program comes with ABSOLUTELY NO WARRANTY;")
@@ -104,7 +113,7 @@ def main(argv):
     max_files = 0
     seconds = 0
 
-    # We check that the input arguments are valid
+    # Comprobamos que los argumentos introducidos sean validos
     try:
         opts, args = getopt.getopt(argv, "hi:m:s:",["help","ifile=","maxfiles=","secs="])
     except getopt.GetoptError:
@@ -121,10 +130,19 @@ def main(argv):
         elif opt in ("-s", "--secs"):
             seconds = int(arg)
 
-    # Argument validation
+    # Validamos argumentos
     if (inputfile == "" or max_files < 1 or seconds < 1):
         showHelp()
         sys.exit()
+
+    # Conseguimos las URL del fichero
+    urls = conseguir_urls(input_file)
+    # Instanciamos un objeto Crawler
+    crawler = Crawler(max_files, seconds)
+    # Procesamos las URL
+    for url in urls:
+        crawler.crawl(url)
+
 
 if __name__ == "__main__":
     main(sys.argv[1:])
