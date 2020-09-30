@@ -13,7 +13,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 '''
 
-
 import sys
 import getopt
 import requests
@@ -41,35 +40,35 @@ class Crawler:
         if url in self.visited_urls:
             return
         # Si podemos seguir descargando
-        html = descargar(url)
+        html = self.descargar(url)
         # Comprobamos que es un HTML
         if html == "":
             return
         --self.max_downloads
         self.visited_urls.append(url)
-        # Llamamos a la libreria BeautifulSoup
-        soup = BeautifulSoup(html.text, features="html.parser")
-        # Creamos el fichero HTML
-        self.guardar_html(soup, html.text)
         # Dormimos el programa
-        time.sleep(seconds)
+        time.sleep(self.seconds)
+        # Llamamos a la libreria BeautifulSoup
+        soup = BeautifulSoup(html, features="html.parser")
+        # Creamos el fichero HTML
+        self.guardar_html(soup, html)
         # Procesamos todos los links del documento HTML
         links = soup.find_all("a", href=True)
         # Procesamos los enlaces encontrados en el html
         for l in links:
             # Normalizamos el link
-            l = normalizar_link(url, l)
+            l = self.normalizar_link(url, l)
             # Hacemos crawl al link normalizado
             self.crawl(l)
 
-    def descargar(url):
+    def descargar(self, url):
         request = requests.get(url)
         # Comprobar que sea un html        
         if "text/html" in request.headers["content-type"]:
-            return request
+            return request.text
         return ""
 
-    def normalizar_link(url, link):
+    def normalizar_link(self, url, link):
         if link.startswith("/") or link.startswith("#"):
             # Usaremos la libreria urlparser
             return urlparse.urljoin(url, link)
@@ -125,7 +124,7 @@ def main(argv):
             showHelp()
             sys.exit()
         elif opt in ("-i", "--ifile"):
-            inputfile = arg
+            input_file = arg
         elif opt in ("-m", "--maxfiles"):
             max_files = int(arg)
         elif opt in ("-s", "--secs"):
