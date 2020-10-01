@@ -1,2 +1,3 @@
 https://suckless.org/sucks/
+https://suckless.org/rocks/
 
