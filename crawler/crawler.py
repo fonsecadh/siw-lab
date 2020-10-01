@@ -47,15 +47,15 @@ class Crawler:
             return
         # Actualizamos el numero de descargas restantes
         self.max_downloads -= 1
+        # Marcamos la url como visitada
         self.visited_urls.append(str(url))
-        print(self.visited_urls)
         # Dormimos el programa
         time.sleep(self.seconds)
         # Llamamos a la libreria BeautifulSoup
         soup = BeautifulSoup(html, features="html.parser")
         # Creamos el fichero HTML
         self.guardar_html(soup, html)
-        # Enseñamos informacion adicional
+        # Mostramos informacion adicional
         if self.max_downloads > 0:
             print("Files to be downloaded: " + str(self.max_downloads))
         # Procesamos todos los links del documento HTML
@@ -81,8 +81,9 @@ class Crawler:
         return link
 
     def guardar_html(self, soup, html):
+        filename = soup.title.string.replace("/", "-") + ".html"
         # Guardamos el documento html en un fichero
-        with codecs.open(soup.title.string.replace("/", "-") + ".html", "w+", encoding="utf-8") as file:
+        with codecs.open(filename, "w+", encoding="utf-8") as file:
             file.write(html)
             file.close()
 

@@ -1,3 +1,4 @@
-https://wiki.archlinux.org/index.php/python
-https://wiki.archlinux.org/index.php/Python/Virtual_environment
+https://qutebrowser.org/index.html
+https://manjaro.org/
+https://wiki.archlinux.org/
 
