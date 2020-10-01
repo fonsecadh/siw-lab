@@ -55,7 +55,9 @@ class Crawler:
         soup = BeautifulSoup(html, features="html.parser")
         # Creamos el fichero HTML
         self.guardar_html(soup, html)
-        print("Files to be downloaded: " + str(self.max_downloads))
+        # Enseñamos informacion adicional
+        if self.max_downloads > 0:
+            print("Files to be downloaded: " + str(self.max_downloads))
         # Procesamos todos los links del documento HTML
         links = soup.find_all("a", href=True)
         # Procesamos los enlaces encontrados en el html

@@ -29,13 +29,13 @@ class BagOfWords:
         return BagOfWords(values=unionized_bag)
 
 def string_to_bag_of_words(text):
-    bag = { }
+    bag = [ ]
     # TODO: Use NLTK
     return bag
 
 def load_lines(filename):
     f = open(filename, "r")
-    lines = { }
+    lines = [ ]
     # TODO: Process lines
     f.close()
     return lines
@@ -55,6 +55,8 @@ def main():
         print(" Overlapping coefficient: " + str(best_text) + "\n")
 
 
+if __name__ == "__main__":
+    main()
 
 
 
