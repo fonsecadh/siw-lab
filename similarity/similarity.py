@@ -93,7 +93,7 @@ def find_best_text(query, texts, coefficient):
     for text in texts:
         text_number += 1
         bag2 = BagOfWords(values = text) # Bag of word del texto actual
-        result = coefficient.calculate(bag1, bag2) # Calculamos el coeficiente
+        result = coefficient.execute(bag1, bag2) # Calculamos el coeficiente
         # Si el nuevo coeficiente es mayor que el actual mejor coeficiente
         if result > best_result: 
             # Actualizamos valores de las variables
