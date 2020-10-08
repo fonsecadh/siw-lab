@@ -13,7 +13,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 '''
 
-from __future__ import division # Para resultados con decimales
 import string
 import nltk
 nltk.download('wordnet')
@@ -23,8 +22,8 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
 class BagOfWords:
-    def __init__(self, text=None, values=None):
-        if text == "": # Recibe un diccionario
+    def __init__(self, text=None, values={ }):
+        if text == "" or text == None: # Recibe un diccionario
             self.values = values
         else: # Recibe un texto a convertir en diccionario
             self.values = string_to_bag_of_words(text)
@@ -51,14 +50,15 @@ class BagOfWords:
 
     def union(self, other):
         # Une dos bag-of-words
-        unionized_bag = dict(other.values, **self.values)
+        aux = dict(other.values, **self.values)
+        unionized_bag = { k: other.values.get(k, 0) + self.values.get(k, 0) for k in aux }
         return BagOfWords(values=unionized_bag)
 
 def string_to_bag_of_words(text):
     bag = { }
     # Eliminamos los simbolos de puntuacion (Excepto apostrofes)
     aux_punctuation = string.punctuation.replace("'", "")
-    translated_text = text.translate(str.maketrans("", "", aux_punctuation))
+    translated_text = str(text).translate(str.maketrans("", "", aux_punctuation))
     # Obtenemos los tokens
     tokens = nltk.word_tokenize(translated_text)
     # Procesamos los tokens
@@ -68,7 +68,7 @@ def string_to_bag_of_words(text):
         token = lemmatizer.lemmatize(token.lower())
         if token not in stopwords.words('english'):
             # Si no es una stop word
-            if token not in words:
+            if token not in bag:
                 # Es la primera vez que aparece
                 bag[token] = 1
             else:
@@ -77,28 +77,29 @@ def string_to_bag_of_words(text):
     return bag
 
 def load_lines(filename):
-    f = open(filename, "r")
-    lines = [ ]
-    for line in f.readlines():
+    f = open(filename, "r", errors = "ignore")
+    lines_file = f.read().splitlines()
+    aux = [ ]
+    for line in lines_file:
         # Solo guardamos el substring correspondiente al texto de la consulta
-        lines.append(string_to_bag_of_words(line[5:]))
+        aux.append(line[5:])
     f.close()
-    return lines
+    return aux
 
 def find_best_text(query, texts, coefficient):
-    bag1 = BagOfWords(values = query) # Bag of words de la consulta
+    bag1 = BagOfWords(text = query) # Bag of words de la consulta
     best_result = 0 # Mejor resultado del coeficiente
     best_text = 0 # Numero del mejor texto
     text_number = 0 # Para llevar la cuenta de en que texto estamos
     for text in texts:
         text_number += 1
-        bag2 = BagOfWords(values = text) # Bag of word del texto actual
+        bag2 = BagOfWords(text = text) # Bag of word del texto actual
         result = coefficient.execute(bag1, bag2) # Calculamos el coeficiente
         # Si el nuevo coeficiente es mayor que el actual mejor coeficiente
         if result > best_result: 
             # Actualizamos valores de las variables
             best_result = result
-            best_text = counter
+            best_text = text_number
     # Devolvemos el numero del mejor texto
     return best_text
     
@@ -115,7 +116,7 @@ class Coefficient:
 
 # Strategy functions for calculating coefficients
 def coef_dice(bag1, bag2):
-    dividend = len(bag2.intersection(bag2))
+    dividend = len(bag1.intersection(bag2))
     divisor = len(bag1) + len(bag2)
     return 2 * (dividend / divisor)
 
