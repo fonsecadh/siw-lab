@@ -33,12 +33,13 @@ def sim_hash(document, restrictiveness):
     # Validamos el valor de la restrictividad
     if restrictiveness > len(terms):
         print("La restrictividad es mayor que el numero de elementos del set")
-        return
+        restrictiveness = len(terms)
+        print("La nueva restrictividad es " + str(restrictiveness))
     # Definimos la cola de prioridad
     queue = [ ]
     # Añadimos los terminos a la cola
     for t in terms:
-        heappush(queue, crc32_hash(t))
+        heappush(queue, crc32_hash(str(t)))
     # Inicializamos el simhash
     simhash = 0
     # Calculamos el simhash
@@ -69,7 +70,7 @@ def string_to_bag_of_words(text):
     return bag
 
 def crc32_hash(term):
-    return hex(zlib.crc32(term.encode("utf-8") & 0xffffffff))
+    return int(zlib.crc32(term.encode("utf-8")) & 0xffffffff)
 
 def get_documents_from_txt(filename):
     f = open(filename, "r", errors = "ignore")
@@ -84,23 +85,23 @@ def get_documents_from_compressed_json(filename):
     # TODO
     pass
 
-def show_results(quasi_duplicates):
+def show_results(quasi_duplicates, restrictiveness):
     print("Simhash Algorithm.\n")
     print("Restrictiveness: " + str(restrictiveness))
     print("Results:")
-    for d_simhash in quasi_duplicates:
+    for d_simhash in quasi_duplicates.keys():
         # Si hay documentos quasi-duplicados
         if len(quasi_duplicates[d_simhash]) > 1:
-            print("\tSimhash " + str(d_simhash) + "\n")
+            print("\nSimhash " + str(d_simhash) + "\n")
             for d in quasi_duplicates[d_simhash]:
                 # Mostramos los documentos quasi-duplicados
-                print("\t\t- " + d)
+                print("\t- " + d)
 
 def main():
     # Obtenemos los documentos
     docs = get_documents_from_txt("cran-1400.txt")
     # Asignamos el valor de restrictividad de nuestro algoritmo
-    restrictiveness = 6
+    restrictiveness = 4
     # Obtenemos los documentos quasi-duplicados
     quasi_duplicates = { } # Diccionario de quasi-duplicados
     for d in docs:
@@ -120,7 +121,7 @@ def main():
         """
         quasi_duplicates[d_simhash].append(d)
     # Mostramos los resultados
-    show_results(quasi_duplicates)
+    show_results(quasi_duplicates, restrictiveness)
 
 if __name__ == "__main__":
     main()
