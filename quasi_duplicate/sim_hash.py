@@ -18,7 +18,7 @@ import string
 import json
 import gzip
 from heapq import heappush, heappop
-import hashlib
+import zlib
 import nltk
 nltk.download('wordnet')
 nltk.download('stopwords')
@@ -69,7 +69,7 @@ def string_to_bag_of_words(text):
     return bag
 
 def crc32_hash(term):
-    # TODO
+    return hex(zlib.crc32(term.encode("utf-8") & 0xffffffff))
 
 def get_documents_from_txt(filename):
     f = open(filename, "r", errors = "ignore")
@@ -82,6 +82,7 @@ def get_documents_from_txt(filename):
 
 def get_documents_from_compressed_json(filename):
     # TODO
+    pass
 
 def show_results(quasi_duplicates):
     print("Simhash Algorithm.\n")
