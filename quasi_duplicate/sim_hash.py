@@ -32,9 +32,12 @@ def sim_hash(document, restrictiveness):
     terms = string_to_bag_of_words(document).keys()
     # Validamos el valor de la restrictividad
     if restrictiveness > len(terms):
-        print("La restrictividad es mayor que el numero de elementos del set")
+        """
+            Si la restrictividad es mayor que el numero 
+            de elementos del set, pasara a tener como valor
+            este numero.
+        """
         restrictiveness = len(terms)
-        print("La nueva restrictividad es " + str(restrictiveness))
     # Definimos la cola de prioridad
     queue = [ ]
     # Añadimos los terminos a la cola
@@ -82,8 +85,13 @@ def get_documents_from_txt(filename):
     return aux
 
 def get_documents_from_compressed_json(filename):
-    # TODO
-    pass
+    aux = [ ]
+    with gzip.GzipFile(filename, "r") as f:
+        for line in f:
+            tweet = json.loads(line.decode("utf-8"))
+            if tweet["_source"]["lang"] == "en":
+                aux.append(tweet["_source"]["text"])
+    return aux
 
 def show_results(quasi_duplicates, restrictiveness):
     print("Simhash Algorithm.\n")
@@ -99,9 +107,10 @@ def show_results(quasi_duplicates, restrictiveness):
 
 def main():
     # Obtenemos los documentos
-    docs = get_documents_from_txt("cran-1400.txt")
+    # docs = get_documents_from_txt("cran-1400.txt")
+    docs = get_documents_from_compressed_json("2008-Feb-02-04.json.gz")
     # Asignamos el valor de restrictividad de nuestro algoritmo
-    restrictiveness = 4
+    restrictiveness = 8
     # Obtenemos los documentos quasi-duplicados
     quasi_duplicates = { } # Diccionario de quasi-duplicados
     for d in docs:
