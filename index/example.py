@@ -1,6 +1,18 @@
 import sys
 import getopt
+import re
 from index import Index
+
+def get_documents(filename):
+    f = open(filename, "r")
+    docs = { }
+    for line in f.readlines():
+        aux = re.split(r"(?<=\d)\D", line, maxsplit = 1)
+        id_doc = aux[0]
+        doc_text = aux[1]
+        docs[id_doc] = doc_text
+    f.close()
+    return docs
 
 def showHelp():
     print("\nOverview:")
@@ -50,7 +62,7 @@ def main(argv):
     try:
         # Mostramos el numero de documentos que contienen el termino dado
         print("Numero de documentos que contienen el termino " + str(input_term) + ": " 
-                + len(index.get_post_list(str(input_term))))
+                + str(len(index.get_post_list(str(input_term)))))
 
         # Mostramos los documentos que contienen ese termino y su TF
         for id_doc in index.get_post_list(str(input_term)).keys():

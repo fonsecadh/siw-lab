@@ -42,7 +42,7 @@ class Index:
                 # El termino no esta en el diccionario
                 post_list = { }
                 post_list[id_doc] = bag[t] # ID del documento y el TF asociado
-                self.put(IndexEntry(t, post_list)) # Insertamos la entrada
+                self.put(t, IndexEntry(t, post_list)) # Insertamos la entrada
             else:
                 # El termino ya esta en el diccionario
                 self.update_post_list(t, id_doc, bag[t])
@@ -76,7 +76,7 @@ class Index:
         self.__contains_term__(term) # Validamos el input
         return self.terms[term]
 
-    def __string_to_bag_of_words__(text):
+    def __string_to_bag_of_words__(self, text):
         bag = { }
         # Eliminamos los simbolos de puntuacion (Excepto apostrofes)
         aux_punctuation = string.punctuation.replace("'", "")

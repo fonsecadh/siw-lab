@@ -1,0 +1,535 @@
+Numero de terminos indexados: 10309
+Numero de documentos que contienen el termino supersonic: 266
+ID documento: I7
+TF: 3
+ID documento: I11
+TF: 1
+ID documento: I14
+TF: 1
+ID documento: I19
+TF: 1
+ID documento: I31
+TF: 3
+ID documento: I33
+TF: 1
+ID documento: I36
+TF: 2
+ID documento: I38
+TF: 1
+ID documento: I39
+TF: 1
+ID documento: I40
+TF: 4
+ID documento: I41
+TF: 4
+ID documento: I48
+TF: 2
+ID documento: I49
+TF: 1
+ID documento: I51
+TF: 1
+ID documento: I52
+TF: 3
+ID documento: I53
+TF: 2
+ID documento: I60
+TF: 3
+ID documento: I65
+TF: 1
+ID documento: I74
+TF: 1
+ID documento: I80
+TF: 5
+ID documento: I89
+TF: 1
+ID documento: I93
+TF: 3
+ID documento: I95
+TF: 2
+ID documento: I97
+TF: 3
+ID documento: I118
+TF: 2
+ID documento: I121
+TF: 2
+ID documento: I122
+TF: 2
+ID documento: I124
+TF: 7
+ID documento: I126
+TF: 2
+ID documento: I127
+TF: 3
+ID documento: I131
+TF: 3
+ID documento: I136
+TF: 1
+ID documento: I146
+TF: 3
+ID documento: I147
+TF: 2
+ID documento: I157
+TF: 1
+ID documento: I161
+TF: 2
+ID documento: I167
+TF: 1
+ID documento: I171
+TF: 1
+ID documento: I172
+TF: 2
+ID documento: I173
+TF: 2
+ID documento: I174
+TF: 4
+ID documento: I175
+TF: 2
+ID documento: I176
+TF: 3
+ID documento: I177
+TF: 1
+ID documento: I179
+TF: 3
+ID documento: I182
+TF: 3
+ID documento: I186
+TF: 3
+ID documento: I187
+TF: 3
+ID documento: I188
+TF: 3
+ID documento: I189
+TF: 2
+ID documento: I193
+TF: 3
+ID documento: I200
+TF: 4
+ID documento: I201
+TF: 3
+ID documento: I211
+TF: 2
+ID documento: I212
+TF: 3
+ID documento: I213
+TF: 4
+ID documento: I214
+TF: 5
+ID documento: I215
+TF: 1
+ID documento: I216
+TF: 10
+ID documento: I221
+TF: 4
+ID documento: I224
+TF: 2
+ID documento: I225
+TF: 2
+ID documento: I226
+TF: 3
+ID documento: I227
+TF: 2
+ID documento: I231
+TF: 3
+ID documento: I232
+TF: 2
+ID documento: I242
+TF: 3
+ID documento: I243
+TF: 3
+ID documento: I248
+TF: 3
+ID documento: I251
+TF: 3
+ID documento: I253
+TF: 4
+ID documento: I259
+TF: 2
+ID documento: I272
+TF: 3
+ID documento: I273
+TF: 1
+ID documento: I276
+TF: 2
+ID documento: I278
+TF: 5
+ID documento: I279
+TF: 2
+ID documento: I280
+TF: 1
+ID documento: I284
+TF: 3
+ID documento: I288
+TF: 2
+ID documento: I301
+TF: 3
+ID documento: I306
+TF: 1
+ID documento: I319
+TF: 2
+ID documento: I328
+TF: 1
+ID documento: I340
+TF: 2
+ID documento: I345
+TF: 2
+ID documento: I346
+TF: 3
+ID documento: I360
+TF: 1
+ID documento: I369
+TF: 3
+ID documento: I371
+TF: 3
+ID documento: I373
+TF: 3
+ID documento: I390
+TF: 1
+ID documento: I391
+TF: 3
+ID documento: I395
+TF: 1
+ID documento: I406
+TF: 3
+ID documento: I409
+TF: 3
+ID documento: I410
+TF: 4
+ID documento: I415
+TF: 1
+ID documento: I426
+TF: 7
+ID documento: I427
+TF: 4
+ID documento: I428
+TF: 3
+ID documento: I429
+TF: 3
+ID documento: I430
+TF: 2
+ID documento: I433
+TF: 4
+ID documento: I434
+TF: 2
+ID documento: I439
+TF: 1
+ID documento: I455
+TF: 4
+ID documento: I464
+TF: 3
+ID documento: I465
+TF: 1
+ID documento: I466
+TF: 1
+ID documento: I467
+TF: 1
+ID documento: I472
+TF: 4
+ID documento: I487
+TF: 3
+ID documento: I496
+TF: 1
+ID documento: I501
+TF: 2
+ID documento: I511
+TF: 4
+ID documento: I512
+TF: 1
+ID documento: I513
+TF: 2
+ID documento: I519
+TF: 4
+ID documento: I521
+TF: 1
+ID documento: I529
+TF: 4
+ID documento: I561
+TF: 3
+ID documento: I566
+TF: 2
+ID documento: I567
+TF: 1
+ID documento: I574
+TF: 1
+ID documento: I597
+TF: 2
+ID documento: I608
+TF: 3
+ID documento: I626
+TF: 3
+ID documento: I627
+TF: 1
+ID documento: I628
+TF: 2
+ID documento: I633
+TF: 2
+ID documento: I636
+TF: 1
+ID documento: I657
+TF: 2
+ID documento: I658
+TF: 2
+ID documento: I662
+TF: 2
+ID documento: I663
+TF: 1
+ID documento: I674
+TF: 1
+ID documento: I680
+TF: 3
+ID documento: I681
+TF: 2
+ID documento: I682
+TF: 2
+ID documento: I683
+TF: 3
+ID documento: I685
+TF: 3
+ID documento: I691
+TF: 1
+ID documento: I694
+TF: 3
+ID documento: I696
+TF: 1
+ID documento: I708
+TF: 2
+ID documento: I710
+TF: 1
+ID documento: I719
+TF: 3
+ID documento: I747
+TF: 2
+ID documento: I755
+TF: 1
+ID documento: I757
+TF: 1
+ID documento: I773
+TF: 2
+ID documento: I774
+TF: 1
+ID documento: I775
+TF: 1
+ID documento: I779
+TF: 2
+ID documento: I790
+TF: 2
+ID documento: I791
+TF: 2
+ID documento: I792
+TF: 2
+ID documento: I793
+TF: 1
+ID documento: I798
+TF: 5
+ID documento: I799
+TF: 1
+ID documento: I802
+TF: 3
+ID documento: I804
+TF: 1
+ID documento: I806
+TF: 2
+ID documento: I807
+TF: 3
+ID documento: I809
+TF: 1
+ID documento: I810
+TF: 3
+ID documento: I811
+TF: 2
+ID documento: I814
+TF: 3
+ID documento: I860
+TF: 1
+ID documento: I870
+TF: 1
+ID documento: I876
+TF: 1
+ID documento: I880
+TF: 3
+ID documento: I886
+TF: 1
+ID documento: I894
+TF: 1
+ID documento: I896
+TF: 2
+ID documento: I903
+TF: 1
+ID documento: I914
+TF: 2
+ID documento: I915
+TF: 3
+ID documento: I917
+TF: 1
+ID documento: I918
+TF: 4
+ID documento: I920
+TF: 3
+ID documento: I921
+TF: 2
+ID documento: I922
+TF: 3
+ID documento: I923
+TF: 2
+ID documento: I924
+TF: 3
+ID documento: I927
+TF: 3
+ID documento: I969
+TF: 1
+ID documento: I970
+TF: 2
+ID documento: I973
+TF: 2
+ID documento: I979
+TF: 2
+ID documento: I987
+TF: 3
+ID documento: I991
+TF: 1
+ID documento: I992
+TF: 2
+ID documento: I993
+TF: 6
+ID documento: I994
+TF: 3
+ID documento: I997
+TF: 3
+ID documento: I998
+TF: 1
+ID documento: I1006
+TF: 1
+ID documento: I1007
+TF: 1
+ID documento: I1061
+TF: 4
+ID documento: I1074
+TF: 3
+ID documento: I1075
+TF: 3
+ID documento: I1096
+TF: 3
+ID documento: I1105
+TF: 2
+ID documento: I1108
+TF: 3
+ID documento: I1110
+TF: 2
+ID documento: I1112
+TF: 3
+ID documento: I1143
+TF: 1
+ID documento: I1151
+TF: 4
+ID documento: I1179
+TF: 1
+ID documento: I1180
+TF: 1
+ID documento: I1181
+TF: 1
+ID documento: I1187
+TF: 1
+ID documento: I1191
+TF: 1
+ID documento: I1192
+TF: 2
+ID documento: I1195
+TF: 1
+ID documento: I1196
+TF: 3
+ID documento: I1197
+TF: 3
+ID documento: I1199
+TF: 3
+ID documento: I1202
+TF: 4
+ID documento: I1207
+TF: 3
+ID documento: I1208
+TF: 1
+ID documento: I1210
+TF: 1
+ID documento: I1211
+TF: 3
+ID documento: I1212
+TF: 4
+ID documento: I1222
+TF: 2
+ID documento: I1224
+TF: 2
+ID documento: I1225
+TF: 2
+ID documento: I1227
+TF: 3
+ID documento: I1228
+TF: 3
+ID documento: I1233
+TF: 3
+ID documento: I1243
+TF: 3
+ID documento: I1247
+TF: 2
+ID documento: I1248
+TF: 1
+ID documento: I1255
+TF: 1
+ID documento: I1258
+TF: 3
+ID documento: I1259
+TF: 3
+ID documento: I1262
+TF: 2
+ID documento: I1266
+TF: 1
+ID documento: I1267
+TF: 3
+ID documento: I1269
+TF: 3
+ID documento: I1270
+TF: 3
+ID documento: I1271
+TF: 6
+ID documento: I1272
+TF: 4
+ID documento: I1280
+TF: 2
+ID documento: I1284
+TF: 2
+ID documento: I1288
+TF: 1
+ID documento: I1300
+TF: 3
+ID documento: I1301
+TF: 1
+ID documento: I1302
+TF: 3
+ID documento: I1306
+TF: 3
+ID documento: I1310
+TF: 1
+ID documento: I1320
+TF: 3
+ID documento: I1328
+TF: 3
+ID documento: I1339
+TF: 3
+ID documento: I1343
+TF: 5
+ID documento: I1352
+TF: 3
+ID documento: I1356
+TF: 1
+ID documento: I1364
+TF: 1
+ID documento: I1366
+TF: 1
+ID documento: I1367
+TF: 3
+ID documento: I1374
+TF: 2
+ID documento: I1377
+TF: 2
+ID documento: I1380
+TF: 2
+ID documento: I1393
+TF: 1
+IDF termino: 0.7189959100450873
