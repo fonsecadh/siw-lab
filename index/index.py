@@ -34,6 +34,8 @@ class Index:
 
     def load_document(self, id_doc, document):
         # Carga los terminos de un documento al diccionario
+        self.n_documents += 1
+        # Creamos la bag of words
         bag = self.__string_to_bag_of_words__(document)
         for t in bag.keys():
             if t not in self.terms.keys():
@@ -48,7 +50,6 @@ class Index:
     def put(self, term, entry):
         # Añadimos la entrada al diccionario
         self.terms[term] = entry
-        self.n_documents += 1
 
     def update_post_list(self, term, id_doc, tf):
         # Actualiza la post_list de la entrada asociada al termino
@@ -56,13 +57,11 @@ class Index:
 
     def get_post_list(self, term):
         # Devuelve la post-list de la entrada asociada al termino
-        self.__contains_term__(term) # Validamos el input
-        return self.terms[term].get_post_list()
+        return self.get(term).get_post_list()
 
     def get_idf(self, term):
         # Devuelve el idf de un termino
-        self.__contains_term__(term) # Validamos el input
-        return self.terms[term].get_idf()
+        return self.get(term).get_idf(self.n_documents)
 
     def __contains_term__(self, term):
         """ 
