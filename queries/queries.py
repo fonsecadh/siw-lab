@@ -61,7 +61,7 @@ def string_to_bag_of_words(text):
 
 def get_id_docs_for_terms(terms, index):
     # Devuelve el id de los documentos que contienen los terminos
-    id_docs = { }
+    id_docs = set()
     for t in terms:
         for id in index.get_post_list(t).keys():
             id_docs.add(id)
@@ -80,7 +80,7 @@ def cosine_similarity(id_doc, bag, index):
     for t in bag:
         # Document
         tf = get_tf(id_doc, t, index)
-        idf = index.get(t).get_idf()
+        idf = index.get_idf(t)
         # Bag
         tf_bag = bag[t] / sum(bag.values())
         # tf * idf
@@ -108,7 +108,10 @@ def show_results(results, results_to_show = None):
     if len(results) < 1:
         print("No results found")
         return
-    if results_to_show < 1 or results_to_show == None:
+    if results_to_show != None:
+        if results_to_show < 1:
+            results_to_show = len(results)
+    else:
         results_to_show = len(results)
     # Mostramos los resultados
     print("Number of results found: " + str(len(results)))
