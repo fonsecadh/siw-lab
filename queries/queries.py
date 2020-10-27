@@ -75,15 +75,26 @@ def get_tf(id_doc, term, index):
 
 def cosine_similarity(id_doc, bag, index):
     dot_product = 0
+    aux_doc = 0
+    aux_bag = 0
     for t in bag:
         # Document
         tf = get_tf(id_doc, t, index)
         idf = index.get(t).get_idf()
         # Bag
         tf_bag = bag[t] / sum(bag.values())
-        dot_product += (idf * tf) * (idf * tf_bag)
-        # TODO
-
+        # tf * idf
+        tfidf_doc = idf * tf
+        tfidf_bag = idf * tf_bag
+        # Dot product
+        dot_product += (tfidf_doc) * (tfidf_bag)
+        # Para luego calcular la magnitud
+        aux_doc += math.pow(tfidf_doc, 2)
+        aux_bag += math.pow(tfidf_bag, 2)
+    # Magnitudes
+    magnitude_doc = math.sqrt(aux_doc)
+    magnitude_bag = math.sqrt(aux_bag)
+    return dot_product / (magnitude_doc * magnitude_bag)
 
 def sort_by_score(id_docs, bag, index):
     # Devuelve los id de los documentos ordenados por puntuacion
@@ -92,6 +103,23 @@ def sort_by_score(id_docs, bag, index):
         score[id_doc] = cosine_similarity(id_doc, bag, index)
     return sorted(score, key=score.get, reverse=True)
 
+def show_results(results, results_to_show = None):
+    # Validaciones
+    if len(results) < 1:
+        print("No results found")
+        return
+    if results_to_show < 1 or results_to_show == None:
+        results_to_show = len(results)
+    # Mostramos los resultados
+    print("Number of results found: " + str(len(results)))
+    print("Showing " + str(results_to_show) + " results.")
+    results_shown = 0
+    for id_doc in results:
+        if results_shown < results_to_show:
+            print("ID Document: " + str(id_doc))
+            results_shown += 1
+        else:
+            return
 
 def showHelp():
     print("Queries  Copyright (C) 2020  Hugo Fonseca Diaz")
@@ -148,9 +176,9 @@ def main(argv):
 
     # Obtenemos el id de los documentos ordenados por puntuacion
     id_docs_sorted = sort_by_score(id_docs, bag, index) 
-    
-    
 
+    # Mostramos los resultados
+    show_results(id_docs_sorted)
 
 if __name__ == "__main__":
     main(sys.argv[1:])
