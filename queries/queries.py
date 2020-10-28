@@ -28,42 +28,41 @@ nltk.download('punkt')
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
-# Definimos el buscador
-searcher = None # Se inicializa en el main
-
 # Ruta de las plantillas
 render = web.template.render('templates/')
 
 # Estructura de URLS
 urls = (
   '/', 'index',
-  '/results', 'results'
+  '/document/(.+)', 'document'
 )
 
 # Formulario para las consultas
 query_form = form.Form(
     form.Textbox("query", description="Query"),
     validators = [
-        form.Validator("A query must be specified", lambda i: i.query == "")
+        form.Validator("A query must be specified", lambda i: i.query != "")
     ]
 )
 
 # Clases para el servicio web
 class index:
     def GET(self):
-        return render.index(query_form())
+        return render.index(query_form(), None)
     
     def POST(self):
         f = query_form()
         if not f.validates():
-            return render.index(query_form())
+            return render.index(f, None)
         else:
             input_query = f["query"].value
-            return render.results(searcher.process_query(input_query))
+            results = web.my_searcher.process_query(input_query)
+            return render.index(f, results)
 
-class results:
-    def GET(self):
-        return render.results()
+class document:
+    def GET(self, id_doc):
+        document_text = web.my_searcher.get_document(id_doc)
+        return render.document(id_doc, document_text)
 
 # Funciones y clases para resolver el problema
 def get_documents(filename):
@@ -77,32 +76,12 @@ def get_documents(filename):
     f.close()
     return docs
 
-def show_results(results, results_to_show = None):
-    # Validaciones
-    if len(results) < 1:
-        print("No results found")
-        return
-    if results_to_show != None:
-        if results_to_show < 1:
-            results_to_show = len(results)
-    else:
-        results_to_show = len(results)
-    # Mostramos los resultados
-    print("Number of results found: " + str(len(results)))
-    print("Showing " + str(results_to_show) + " results.")
-    results_shown = 0
-    for id_doc in results:
-        if results_shown < results_to_show:
-            print("ID Document: " + str(id_doc))
-            results_shown += 1
-        else:
-            return
-
 class Searcher:
-    def __init__(self, index):
+    def __init__(self, index, documents):
         self.index = index
+        self.documents = documents
 
-    def __string_to_bag_of_words__(text):
+    def __string_to_bag_of_words__(self, text):
         bag = { }
         # Eliminamos los simbolos de puntuacion (Excepto apostrofes)
         aux_punctuation = string.punctuation.replace("'", "")
@@ -124,7 +103,7 @@ class Searcher:
                     bag[token] += 1
         return bag
 
-    def __get_id_docs_for_terms__(terms, index):
+    def __get_id_docs_for_terms__(self, terms, index):
         # Devuelve el id de los documentos que contienen los terminos
         id_docs = set()
         for t in terms:
@@ -132,19 +111,19 @@ class Searcher:
                 id_docs.add(id)
         return id_docs
 
-    def __get_tf__(id_doc, term, index):
+    def __get_tf__(self, id_doc, term, index):
         try:
             return index.get_post_list(term)[id_doc]
         except KeyError:
             return 0
 
-    def __cosine_similarity__(id_doc, bag, index):
+    def __cosine_similarity__(self, id_doc, bag, index):
         dot_product = 0
         aux_doc = 0
         aux_bag = 0
         for t in bag:
             # Document
-            tf = __get_tf__(id_doc, t, index)
+            tf = self.__get_tf__(id_doc, t, index)
             idf = index.get_idf(t)
             # Bag
             tf_bag = bag[t] / sum(bag.values())
@@ -161,25 +140,28 @@ class Searcher:
         magnitude_bag = math.sqrt(aux_bag)
         return dot_product / (magnitude_doc * magnitude_bag)
 
-    def __sort_by_score__(id_docs, bag, index):
+    def __sort_by_score__(self, id_docs, bag, index):
         # Devuelve los id de los documentos ordenados por puntuacion
         score = { }
         for id_doc in id_docs:
-            score[id_doc] = cosine_similarity(id_doc, bag, index)
+            score[id_doc] = self.__cosine_similarity__(id_doc, bag, index)
         return sorted(score, key=score.get, reverse=True)
 
     def process_query(self, query):
         # Obtenemos la bolsa de terminos de la query
-        bag = __string_to_bag_of_words__(query) 
+        bag = self.__string_to_bag_of_words__(query) 
 
         # Obtenemos el id de los documentos que contienen los terminos
-        id_docs = __get_id_docs_for_terms__(bag.keys(), self.index)
+        id_docs = self.__get_id_docs_for_terms__(bag.keys(), self.index)
 
         # Obtenemos el id de los documentos ordenados por puntuacion
-        id_docs_sorted = __sort_by_score__(id_docs, bag, self.index)
+        id_docs_sorted = self.__sort_by_score__(id_docs, bag, self.index)
 
         # Devolvemos los resultados
         return id_docs_sorted
+    
+    def get_document(self, id_doc):
+        return self.documents[id_doc]
 
 def main():
     # Creamos el fichero invertido
@@ -193,7 +175,10 @@ def main():
         index.load_document(id_doc, documents[id_doc])
 
     # Creamos el buscador
-    searcher = Searcher(index)
+    searcher = Searcher(index, documents)
+
+    # Guardamos el buscador en el objeto web
+    web.my_searcher = searcher
     
     # Iniciamos el servicio web
     app = web.application(urls, globals())

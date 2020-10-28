@@ -1,4 +1,4 @@
-$def with(form)
+$def with(form, results)
 
 <html>
     <head>
@@ -7,13 +7,19 @@ $def with(form)
         <meta name="description" content="Basic searcher that resolves queries given by user." />
         <meta name="keywords" content="searcher, queries, search engine" />
         <meta name="author" content="Hugo Fonseca Diaz (UO258318)" />
-        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
     </head>
     <body>
         <h1>Basic Searcher</h1>
         <form method="POST">
             $:form.render()
         </form>
+        $if results != None:
+            <h2>Resultados</h2>
+            <ul>
+                $for result in results:
+                <li><a href="/document/$result">$result</a></li>
+            </ul>
     </body>
 </html>
 
