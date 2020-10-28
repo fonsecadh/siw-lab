@@ -1,0 +1,18 @@
+$def with(results)
+
+<html>
+    <head>
+        <title>Results found</title>
+        <meta charset="UTF-8" />
+        <meta name="author" content="Hugo Fonseca Diaz (UO258318)" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <h1>Basic Searcher</h1>
+        <ul>
+            $for result in results:
+            <li>$result</li>
+        </ul>
+    </body>
+</html>
+

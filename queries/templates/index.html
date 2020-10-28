@@ -1,0 +1,19 @@
+$def with(form)
+
+<html>
+    <head>
+        <title>Basic Searcher</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Basic searcher that resolves queries given by user." />
+        <meta name="keywords" content="searcher, queries, search engine" />
+        <meta name="author" content="Hugo Fonseca Diaz (UO258318)" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <h1>Basic Searcher</h1>
+        <form method="POST">
+            $:form.render()
+        </form>
+    </body>
+</html>
+

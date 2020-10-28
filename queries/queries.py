@@ -181,24 +181,7 @@ class Searcher:
         # Devolvemos los resultados
         return id_docs_sorted
 
-
-def showHelp():
-    print("Queries  Copyright (C) 2020  Hugo Fonseca Diaz")
-    print("This program comes with ABSOLUTELY NO WARRANTY;")
-    print("This is free software, and you are welcome to redistribute it")
-    print("under certain conditions;")
-
-    print("\nOverview:")
-    print("Normally Queries is invoked like this:")
-    print("\tqueries.py -q QUERY")
-    print("\nCommand-Line Options:")
-    print("The full format for invoking Queries is:")
-    print("\tqueries.py OPTIONS")
-    print("\tqueries.py -q QUERY")
-    print("\n'-h'\n'--help'\n\tShow help")
-    print("\n'-q'\n'--query'\n\tThe query")
-
-def main(argv):
+def main():
     # Creamos el fichero invertido
     index = Index()
 
@@ -211,8 +194,11 @@ def main(argv):
 
     # Creamos el buscador
     searcher = Searcher(index)
-
+    
+    # Iniciamos el servicio web
+    app = web.application(urls, globals())
+    app.run()
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    main()
 
