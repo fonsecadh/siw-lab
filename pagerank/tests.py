@@ -11,7 +11,7 @@ from __future__ import division
 import unittest
 
 # MODIFICAR EL NOMBRE DEL PAQUETE SI ES NECESARIO
-from common import Graph
+from graph import Graph
 
 
 class TestBagOfWords(unittest.TestCase):
