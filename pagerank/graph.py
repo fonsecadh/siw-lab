@@ -17,6 +17,41 @@ import numpy as np
 
 class Graph:
     def __init__(self, edges):
-        pass
+        # Adjacency Matrix
+        self.M = self.__get_M__(edges)
+
+    def page_rank(self, d = 0.85, limit = 1.0e-8):
+        N = self.M.shape[1]
+        v = np.random.rand(N, 1)
+        v = v / np.linalg.norm(v, 1)
+        M_hat = (d * self.M + (1 - d) / N)
+        while True:
+            prev_v = v
+            v = M_hat @ v # Matrix multiplication
+            if np.linalg.norm(v - prev_v, 2) <= limit): break
+        return v
+
+    def __get_M__(self, edges):
+        # Returns the adjacency matrix
+        # Get the unique nodes from the edges tuples
+        aux = set(e[0] for e in edges)
+        unique_nodes = aux.union(set(e[1] for e in edges))
+
+        # Dictionary: key = node, value = position
+        nodes = { }
+        pos = 00
+        for n in sorted(list(unique_nodes)):
+            nodes[n] = pos
+            pos += 1
+
+        # The matrix is created
+        num_nodes = len(nodes)
+        M = np.zeros((num_nodes, num_nodes)
+        for e in edges:
+            row = nodes[e[0]]
+            col = nodes[e[1]]
+            M[row][col] = 1
+        return M
+
 
 
