@@ -26,19 +26,19 @@ class Graph:
     def page_rank(self, damping = 0.85, limit = 1.0e-8):
         M = self.__stochastic__(self.M) # Stochastic matrix
         N = M.shape[1] # Number of nodes
-        v = np.full((1, N), (1 / N)) 
-        v = v / np.linalg.norm(v, 1)
-        R = (1 - damping) / N + damping * M
-        while True: # While the result is over the limit
-            prev_v = v
-            v = np.dot(v, R)
-            if np.linalg.norm(v - prev_v, 2) <= limit: 
+        R = np.full((1, N), (1 / N)) # Solution eigenvector 
+        R = R / np.linalg.norm(R, 1)
+        M_hat = (1 - damping) / N + damping * M # Matrix for calculating PR
+        while True: # Do while the result is over the limit
+            prev_R = R
+            R = np.dot(R, M_hat) # Recalculate solution eigenvector
+            if np.linalg.norm(R - prev_R, 2) <= limit: 
                 break
         # Dictionary with the PR values
         # key = node, value = PR(node)
         pos = 0
         for n in self.PR.keys():
-            self.PR[n] = v[0, pos]
+            self.PR[n] = R[0, pos] # Insert eigenvectors into PR dictionary
             pos += 1
         return self.PR
 
@@ -52,7 +52,7 @@ class Graph:
         nodes = { }
         pos = 00
         for n in sorted(list(unique_nodes)):
-            self.PR[n] = 0 # PageRank values dictionary
+            self.PR[n] = 0 # Dictionary of PageRank
             nodes[n] = pos
             pos += 1
 
