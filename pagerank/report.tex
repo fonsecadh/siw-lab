@@ -1,0 +1,98 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{parskip}
+\usepackage[colorlinks=true,urlcolor=Blue,linkcolor=black,citecolor=black]{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{fancyhdr}
+\usepackage{csquotes}
+\usepackage{lastpage}
+\usepackage{array}
+\usepackage{listings}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\usepackage[affil-it]{authblk}
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+\usepackage[hmargin=2cm,top=4cm,headheight=65pt,footskip=65pt]{geometry}
+
+% Para el código de Python
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+% Documento
+\begin{document}
+% Título
+\title{SIW PL7. PageRank.}
+\author{Hugo Fonseca Díaz\\ \email{uo258318@uniovi.es}}
+\affil{Escuela de Ingeniería Informática. Universidad de Oviedo.}
+\maketitle
+% Requerimientos
+\section{Requerimientos}
+Los requerimientos para el entorno de ejecución de esta práctica son:
+\begin{itemize}
+    \item Python 3.8
+    \item Biblioteca \textit{numpy}
+\end{itemize}
+% Detalles de la implementación
+\section{Detalles de la documentación}
+Para esta práctica se nos pedía realizar una implementación del algoritmo PageRank ideado por Larry Page y Sergey Brin. Dicho algoritmo está implementado en el script de python \textit{graph.py}. En él se encuentra la clase \textit{Graph}, que modela un grafo. Dicha clase es la encargada de convertir los bordes pasados como argumento en su constructor a una matriz de adyacencia. Dicha matriz sera normalizada y convertida en una matriz estocástica que será la matriz con la que trabajará el algoritmo. Además, en el constructor se definirá un diccionario \textit{PR} que guardará el nombre de los nodos junto a su valor de PageRank. A continuación hablaremos sobre el método \textit{page rank} más en detalle.
+
+El método \textit{page rank} es el siguiente:
+
+\begin{lstlisting}
+def page_rank(self, damping = 0.85, limit = 1.0e-8):
+    M = self.__stochastic__(self.M) # Stochastic matrix
+    N = M.shape[1] # Number of nodes
+    R = np.full((1, N), (1 / N)) # Solution eigenvector
+    R = R / np.linalg.norm(R, 1)
+    M_hat = (1 - damping) / N + damping * M # Matrix for calculating PR
+    while True: # Do while the result is over the limit
+        prev_R = R
+        R = np.dot(R, M_hat) # Recalculate solution eigenvector
+        if np.linalg.norm(R - prev_R, 2) <= limit:
+            break
+    # Dictionary with the PR values
+    # key = node, value = PR(node)
+    pos = 0
+    for n in self.PR.keys():
+        self.PR[n] = R[0, pos] # Insert eigenvectors into PR dictionary
+        pos += 1
+    return self.PR
+\end{lstlisting}
+
+Para entenderlo mejor vamos a hablar sobre las variables utilizadas:
+\begin{itemize}
+    \item \textbf{$\boldsymbol{M}$:} matriz de adyacencia. Normalizada y estocástica.
+    \item \textbf{$\boldsymbol{N}$:} número de nodos en el grafo.
+    \item \textbf{$\boldsymbol{R}$:} \textit{eigenvector} solución con los valores del PageRank.
+    \item \textbf{$\boldsymbol{M_{hat}}$:} Matriz con la que calculamos los valores de $R$ en cada iteración.
+    \item \textbf{$\boldsymbol{PR}$:} diccionario cuyas claves son los nodos del grafo y cuyos valores son el PageRank asociado a cada uno de esos nodos.
+\end{itemize}
+
+El grueso del algoritmo está inspirado en el código de Python ofrecido por \textit{Wikipedia} en \cite{codewikipedia}.
+% Bibliografía
+\begin{thebibliography}{8}
+\bibitem{codewikipedia}
+Entrada de la Wikipedia (Inglés) para el algoritmo \textit{PageRank}, \url{https://en.wikipedia.org/wiki/PageRank#Python}. Última vez accedido 5 Noviembre 2020.
+\end{thebibliography}
+\end{document}
+

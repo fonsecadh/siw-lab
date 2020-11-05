@@ -38,7 +38,7 @@ class Graph:
         # key = node, value = PR(node)
         pos = 0
         for n in self.PR.keys():
-            self.PR[n] = R[0, pos] # Insert eigenvectors into PR dictionary
+            self.PR[n] = R[0, pos] # Insert eigenvector values into PR dictionary
             pos += 1
         return self.PR
 
