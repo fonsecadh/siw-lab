@@ -20,6 +20,9 @@
 \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
 \usepackage[hmargin=2cm,top=4cm,headheight=65pt,footskip=65pt]{geometry}
 
+% Graphicx Path
+\graphicspath{ {./images/} }
+
 % Documento
 \begin{document}
 % Título
@@ -39,6 +42,27 @@ Para este ejercicio se ha utilizado la noticia de la \textit{BBC} sobre el retor
     \item \textbf{Movimiento al Socialismo:} Organization(name: Movimiento al Socialismo, legalName: Movimiento al Socialismo, url: https://www.wikidata.org/wiki/Q1142239)
     \item \textbf{Elección presidencial:} VoteAction(name: Presidential election, participant: Organization(Movimiento al Socialismo), candidate: Person(Luis Arce), url: https://www.wikidata.org/wiki/Q74596528)
 \end{itemize}
+
+\paragraph{¿Deberían tener valor todos los \textit{itemid}}
+Ya que una de las grandes ventajas de etiquetar los documentos HTML con microdatos es el interlazado de los mismos, todos los las entidades deberían tener un \textit{id} único que les identifique.
+
+\paragraph{¿Qué valor debería asignarse?}
+Como la forma en la que nos referimos a una entidad varia según diversos factores, entre los que se encuentran cosas como el idioma, es mejor escoger un identificador que sea independiente a estas cuestiones. En nuestro caso se ha escogido la entrada de dichas entidades en la \textit{Wikidata} \cite{wikidata}, un grafo de conocimiento de datos abiertos y de ámbito colaborativo. Wikidata es ampliamente utilizada y por tanto la información se revisa a menudo, por lo que incluso si hubiese falta de información o información incorrecta las ventajas a largo plazo son mayores. Además, los identificadores de Wikipedia están específicamente diseñados para nuestro problema, por lo que es una opción recomendable.
+
+\paragraph{Inconveniencias a la hora de incrustrar los metadatos}
+El mayor problema al definir los metadatos para este ejercicio ha sido el tener que respetar la estructura original de la noticia. Esto ha causado que ciertas propiedades y relaciones descritas anteriormente en el documento (cuando hablábamos de las entidades definidas) no hayan podido etiquetarse correctamente en el documento HTML. Es por esto también por lo que ciertas propiedades, como la ocupación de las personas, den lugar a errores al validar el documento con la herramienta de \textit{Google Structured Data Testing Tool} \cite{googlesdtt}. Esto se debe al hecho de que no disponemos de los datos para poder etiquetar ciertos metadatos considerados necesarios por la herramienta.
+
+Dicha validación puede observarse en la \textbf{Figura 1}.
+
+\begin{figure}[h]
+\caption{Validación del documento HTML del ejercicio 1.}
+\centering
+\includegraphics[width=\textwidth]{validacion-ex1}
+\end{figure}
+
+% Ejercicio 2
+\section{Ejercicio 2}
+
 % Bibliografía
 \begin{thebibliography}{8}
 \bibitem{bbcevomorales}
@@ -46,6 +70,12 @@ Noticia de la BBC sobre el retorno del expresidente Evo Morales a Bolivia, \url{
 
 \bibitem{permidtool}
 \textit{Intelligent Tagging Demo}, herramienta de \textit{PermID}, \url{https://permid.org/onecalaisViewer}. Última vez accedido 12 de noviembre de 2020.
+
+\bibitem{wikidata}
+Página de la \textit{Wikidata}, \url{https://www.wikidata.org/wiki/Wikidata:Main_Page}. Última vez accedido 12 de noviembre de 2020.
+
+\bibitem{googlesdtt}
+Página de la \textit{Google Structured Data Testing Tool}, \url{https://search.google.com/structured-data/testing-tool/}. Última vez accedido 12 de noviembre de 2020.
 \end{thebibliography}
 \end{document}
 
