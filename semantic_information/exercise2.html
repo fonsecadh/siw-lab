@@ -7,7 +7,7 @@
     <body>
         <header>
             <script type="application/ld+json">
-              {
+                {
                 "@context": {
                   "cc": "http://creativecommons.org/ns#",
                   "ctag": "http://commontag.org/ns#",
@@ -51,7 +51,7 @@
                 },
                 "@graph": [
                   {
-                    "@id": "_:N87d20637af2445ec83dea37c29d9085d",
+                    "@id": "https://doi.org/10.1017/CBO9781316182635",
                     "@type": "schema:Chapter",
                     "schema:isPartOf": {
                       "@id": "urn:isbn:9781107500075"
@@ -59,50 +59,104 @@
                     "schema:name": "Political Opinion"
                   },
                   {
-                    "@id": "_:N237308aadd894e9cb88f3f9bd3ca7f85",
+                    "@id": "https://doi.org/10.1145/2001269.2001297",
+                    "@type": "schema:ScholarlyArticle",
+                    "schema:isPartOf": {
+                        "@id": "https://cacm.acm.org/"
+                    },
+                    "schema:publisher": {
+                        "@id": "https://www.acm.org/",
+                        "@type": "schema:Organization"
+                    },
+                    "schema:name": "Don't turn social media into another 'Literary Digest' poll",
+                    "schema:author": "Daniel Gayo-Avello
+                  },
+                  {
+                    "@id": "https://doi.org/10.1109/MIC.2012.137",
+                    "@type": "schema:ScholarlyArticle",
+                    "schema:isPartOf": {
+                        "@id": "https://www.computer.org/csdl/magazines/ic"
+                    },
+                    "schema:name": "No, you cannot predict elections with Twitter",
+                    "schema:author": "Daniel Gayo-Avello
+                  },
+                  {
+                    "@id": "https://doi.org/10.1108/IntR-06-2013-0115",
+                    "@type": "schema:ScholarlyArticle",
+                    "schema:isPartOf": {
+                        "@id": "https://www.emerald.com/insight/publication/issn/1066-2243"
+                    },
+                    "schema:name": "The power of prediction with social media",
+                    "schema:author": "Daniel Gayo-Avello
+                  },
+                  {
+                    "@id": "https://doi.ieeecomputersociety.org/10.1109/MMUL.2015.47",
+                    "@type": "schema:ScholarlyArticle",
+                    "schema:isPartOf": {
+                        "@id": "https://www.computer.org/csdl/magazine/mu"
+                    },
+                    "schema:name": "Social Media, Democracy, and Democratization",
+                    "schema:author": "Daniel Gayo-Avello
+                  },
+                  {
+                    "@id": "https://doi.org/10.1109/MIC.2017.2911439",
+                    "@type": "schema:ScholarlyArticle",
+                    "schema:isPartOf": {
+                        "@id": "https://www.computer.org/csdl/magazines/ic"
+                    },
+                    "schema:name": "Social Media Won’t Free Us",
+                    "schema:author": "Daniel Gayo-Avello
+                  },
+                  {
+                    "@id": "https://www.computer.org/csdl/magazine/mu",
                     "@type": "schema:Periodical",
                     "schema:name": "IEEE Multimedia"
                   },
                   {
-                    "@id": "_:N0f982a4b306847a78b9496ab615d9502",
+                    "@id": "https://www.emerald.com/insight/publication/issn/1066-2243",
                     "@type": "schema:Periodical",
                     "schema:name": "Internet Research"
                   },
                   {
-                    "@id": "_:N57a8d3cded6d4061af9d3cb1e7acd39f",
+                    "@id": "https://www.computer.org/csdl/magazines/ic",
                     "@type": "schema:Periodical",
                     "schema:name": "IEEE Internet Computing"
                   },
                   {
-                    "@id": "_:N8381ebd04bda429fbb2c1d900d8b0e2c",
+                    "@id": "https://cacm.acm.org/",
                     "@type": "schema:Periodical",
                     "schema:name": "Communications of the ACM"
                   },
                   {
-                    "@id": "_:Nb6734e117ddf48a4a3f95b95e5239145",
+                    "@id": "http://www.di.uniovi.es/",
                     "@type": "http://schema.org/Organization",
-                    "http://schema.org/name": "Department of Computer Science"
+                    "schema:name": "Department of Computer Science"
+                    "schema:parentOrganization": {
+                        "@id": "https://www.uniovi.es/"
+                    }
                   },
                   {
-                    "@id": "_:N8013fd042aca458b9f5373abc2c9bbda",
+                    "@id": "http://danigayo.info/",
                     "@type": "schema:Person",
                     "schema:affiliation": {
-                      "@id": "_:Nd46c7cbe934541d68dc746e686f6354c"
+                      "@id": "http://www.di.uniovi.es/"
                     },
                     "schema:jobTitle": "associate professor",
                     "schema:name": "Daniel Gayo-Avello"
                   },
                   {
-                    "@id": "urn:isbn:9781107500075",
+                    "@id": "https://doi.org/10.1017/CBO9781316182635",
                     "@type": "schema:Book",
                     "schema:name": "\"Twitter: A Digital Socioscope\"",
-                    "schema:publisher": "Cambridge University Press"
+                    "schema:publisher": {
+                        "@id": "https://www.cambridge.org/"
+                    }
                   },
                   {
-                    "@id": "_:Nd46c7cbe934541d68dc746e686f6354c",
+                    "@id": "https://www.uniovi.es/",
                     "@type": "http://schema.org/CollegeOrUniversity",
                     "http://schema.org/department": {
-                      "@id": "_:Nb6734e117ddf48a4a3f95b95e5239145"
+                      "@id": "http://www.di.uniovi.es/"
                     },
                     "http://schema.org/name": "University of Oviedo"
                   }
@@ -112,6 +166,15 @@
         </header>
         <main>
             <section>
+                I'm Daniel Gayo-Avello, an associate professor in the Department of Computer Science at the University of Oviedo. 
+
+                My main <a href="/research">area of interest</a> is Web IR but I'm currently focused on social media research. 
+
+                <a href="/publications">I have published</a> in international conferences, journals and magazines, such as <a href="/publications/detail.php?id=1c98d96a5fbce0f2ff8c6913d5637015"><em>Communications of the ACM</em></a>, <a href="/publications/detail.php?id=ed2e221fc9b4ff1e175db852c1f7b1f4"><em>IEEE Internet Computing</em></a>, or <a href="/publications/detail.php?id=6bfad39f44d89a09f072c0c4021a2206"><em>IEEE Multimedia</em></a>. 
+
+                In 2013 I acted as guest co-editor for a <a href="http://www.emeraldinsight.com/toc/intr/23/5">special issue of <em>Internet Research</em> on the predictive power of social media</a>. 
+
+                    I have recently contributed a <a href="/publications/detail.php?id=1d1377d53fd5a0c308551c0fdcf9af04">chapter on Political Opinion</a> to "Twitter: A Digital Socioscope", published by Cambridge University Press.
             </section>
         </main>
     </body>
