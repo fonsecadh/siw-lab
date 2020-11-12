@@ -1,0 +1,51 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{parskip}
+\usepackage[colorlinks=true,urlcolor=Blue,linkcolor=black,citecolor=black]{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{fancyhdr}
+\usepackage{csquotes}
+\usepackage{lastpage}
+\usepackage{array}
+\usepackage{listings}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\usepackage[affil-it]{authblk}
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+\usepackage[hmargin=2cm,top=4cm,headheight=65pt,footskip=65pt]{geometry}
+
+% Documento
+\begin{document}
+% Título
+\title{SIW PL8. Información semántica.}
+\author{Hugo Fonseca Díaz\\ \email{uo258318@uniovi.es}}
+\affil{Escuela de Ingeniería Informática. Universidad de Oviedo.}
+\maketitle
+% Ejercicio 1
+\section{Ejercicio 1}
+Para este ejercicio se ha utilizado la noticia de la \textit{BBC} sobre el retorno del expresidente Evo Morales a Bolivia \cite{bbcevomorales}. Los párrafos utilizados se encuentran en texto plano en el archivo \textit{noticia.txt}. Al pasar dicho texto por la herramienta de \textit{PermID} disponible en \cite{permidtool}, se obtiene una serie de entidades. Una vez obtenidas, procedemos a complementarlas con nuestro propio conocimiento, por lo que nos quedan las siguientes entidades:
+
+\begin{itemize}
+    \item \textbf{Evo Morales:} Person(familyName: Morales, givenName: Evo, hasOccupation: Role(hasOccupation: Occupation(name: President), startDate: 2006, endDate: 2019), nationality: Country(Bolivia), knows: Person(Luis Arce), member: Organization(Movimiento al Socialismo), url: https://www.wikidata.org/wiki/Q42410)
+    \item \textbf{Luis Arce:} Person(familyName: Arce, givenName: Luis, hasOccupation: Occupation(name: President), nationality: Country(Bolivia), knows: Person(Evo Morales), member: Organization(Movimiento al Socialismo), url: https://www.wikidata.org/wiki/Q16149892)
+    \item \textbf{Bolivia:} Country(name: Bolivia, url: https://www.wikidata.org/wiki/Q750)
+    \item \textbf{Argentina:} Country(name: Argentina, url: https://www.wikidata.org/wiki/Q414)
+    \item \textbf{Movimiento al Socialismo:} Organization(name: Movimiento al Socialismo, legalName: Movimiento al Socialismo, url: https://www.wikidata.org/wiki/Q1142239)
+    \item \textbf{Elección presidencial:} VoteAction(name: Presidential election, participant: Organization(Movimiento al Socialismo), candidate: Person(Luis Arce), url: https://www.wikidata.org/wiki/Q74596528)
+\end{itemize}
+% Bibliografía
+\begin{thebibliography}{8}
+\bibitem{bbcevomorales}
+Noticia de la BBC sobre el retorno del expresidente Evo Morales a Bolivia, \url{https://www.bbc.com/news/world-latin-america-54872827}. Última vez accedido 12 de noviembre de 2020.
+
+\bibitem{permidtool}
+\textit{Intelligent Tagging Demo}, herramienta de \textit{PermID}, \url{https://permid.org/onecalaisViewer}. Última vez accedido 12 de noviembre de 2020.
+\end{thebibliography}
+\end{document}
+
