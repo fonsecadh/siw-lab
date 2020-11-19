@@ -50,7 +50,7 @@
 \maketitle
 % Ejercicio 1
 \section{Información estructurada}
-En esta primera sección obtendremos información estructurada de tres textos mediante el uso de tipos definidos en \verb|schema.org| \cite{schemaorg}. Dicha información se define a continuación:
+En esta primera sección se obtendrá información estructurada de tres textos mediante el uso de tipos definidos en \verb|schema.org| \cite{schemaorg}. Dicha información se define a continuación:
 
 \begin{itemize}
     \item \textbf{Miles Davis:} es una entidad de tipo \verb|Person|. Sus propiedades son:
@@ -103,6 +103,71 @@ En esta primera sección obtendremos información estructurada de tres textos me
             \item \verb|url|: \url{https://www.wikidata.org/wiki/Q132874}
         \end{itemize}
 \end{itemize}
+\section{Modelado RDF}
+En esta sección se muestra el modelado \textit{RDF} en formato \textit{Turtle} con el que se ha representado la información listada previamente. Dicho modelado es el siguiente:
+
+\begin{lstlisting}
+@prefix schema: <https://schema.org/> .
+@prefix wikidata: <https://wikidata.org/> .
+@prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+# Primer texto
+wikidata:Q93341 rdf:type schema:Person ;
+    schema:familyName "Davis" ;
+    schema:givenName "Miles" ;
+    schema:hasOccupation [
+        rdf:type schema:Occupation ;
+        schema:name "jazz musician"
+    ] ;
+    schema:nationality wikidata:Q30 .
+
+# Segundo texto
+wikidata:Q76 rdf:type schema:Person ;
+    schema:familyName "Obama" ;
+    schema:givenName "Barack" ;
+    schema:hasOccupation [
+        rdf:type schema:Occupation ;
+        schema:name "president"
+    ] .
+
+wikidata:Q458 rdf:type schema:Organization ;
+    schema:name "European Union" ;
+    schema:legalName "European Union" .
+
+wikidata:Q61 rdf:type schema:City ;
+    schema:name "Washington DC" .
+
+<https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html> rdf:type schema:ExchangeRateSpecification ;
+    schema:currency "EUR" ;
+    schema:currentExchangeRate [
+        rdf:type schema:UnitPriceSpecification ;
+        schema:priceCurrency "USD" ;
+        schema:price 1.3
+    ] .
+
+# Tercer texto
+wikidata:Q9684 rdf:type schema:Newspaper ;
+    schema:name "The New York Times" .
+
+wikidata:Q92739 rdf:type schema:Person ;
+    schema:familyName "McCarthy" ;
+    schema:givenName "John" ;
+    schema:hasOccupation [
+        rdf:type schema:Occupation ;
+        schema:name "computer scientist"
+    ] .
+
+wikidata:Q132874 rdf:type schema:ComputerLanguage ;
+    schema:name "LISP" .
+\end{lstlisting}
+
+En la \textbf{Figura 1} se observa el output de la herramienta \textit{RDFShape} al introducir el fichero en formato \textit{Turtle}. Se observa que el fichero está bien formado.
+
+\begin{figure}[h]
+\caption{Validación del fichero \textit{Turtle} mediante la herramienta \textit{RDFShape}.}
+\centering
+\includegraphics[width=\textwidth]{weso_turtle}
+\end{figure}
 % Bibliografía
 \begin{thebibliography}{8}
 \bibitem{schemaorg}
