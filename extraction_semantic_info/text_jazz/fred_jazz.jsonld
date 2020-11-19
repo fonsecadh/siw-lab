@@ -1,0 +1,464 @@
+[
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_33_41_musician",
+    "@type": [
+      "http://www.essepuntato.it/2008/12/earmark#PointerRange"
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#musician_1"
+      },
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Miles_davis"
+      }
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Musician"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#begins": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "33"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#ends": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "41"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#refersTo": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"
+      }
+    ],
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "musician"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_28_41_jazz+musician",
+    "@type": [
+      "http://www.essepuntato.it/2008/12/earmark#PointerRange"
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#JazzMusician"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#begins": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "28"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#ends": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "41"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#refersTo": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "jazz musician"
+      },
+      {
+        "@value": "Jazz Musician"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasDeterminer",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_19_27_american",
+    "@type": [
+      "http://www.essepuntato.it/2008/12/earmark#PointerRange"
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#American"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#begins": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "19"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#ends": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "27"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#refersTo": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"
+      }
+    ],
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#JJ"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "american"
+      }
+    ]
+  },
+  {
+    "@id": "http://dbpedia.org/resource/Miles_Davis",
+    "@type": [
+      "http://schema.org/Person",
+      "http://schema.org/MusicGroup"
+    ]
+  },
+  {
+    "@id": "http://www.essepuntato.it/2008/12/earmark#ends",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse",
+    "@type": [
+      "http://www.essepuntato.it/2008/12/earmark#StringDocuverse"
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#hasContent": [
+      {
+        "@value": "Miles_Davis was an american jazz musician"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#possibleType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_0_11_Miles_Davis",
+    "@type": [
+      "http://www.essepuntato.it/2008/12/earmark#PointerRange"
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Miles_davis"
+      }
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Musician"
+      },
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Jazz"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#begins": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "0"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#ends": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "11"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#refersTo": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"
+      }
+    ],
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNP"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Miles_Davis"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#jazz_1",
+    "@type": [
+      "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Jazz"
+    ],
+    "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Miles_davis"
+      }
+    ],
+    "http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasDeterminer": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#an"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#AmericanJazzMusician",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#AmericanJazz"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#JazzMusician"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Jazz",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#boxerpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "http://dbpedia.org/resource/Jazz"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#AmericanJazz",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasQuality": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#American"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Jazz"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#American",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#boxerpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"
+      }
+    ]
+  },
+  {
+    "@id": "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_28_32_jazz",
+    "@type": [
+      "http://www.essepuntato.it/2008/12/earmark#PointerRange"
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#jazz_1"
+      },
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Miles_davis"
+      }
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Jazz"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#begins": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "28"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#ends": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "32"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#refersTo": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"
+      }
+    ],
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "jazz"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Miles_davis",
+    "@type": [
+      "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#AmericanJazzMusician"
+    ],
+    "http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#possibleType": [
+      {
+        "@id": "http://dbpedia.org/ontology/Place"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#sameAs": [
+      {
+        "@id": "http://dbpedia.org/resource/Miles_Davis"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.essepuntato.it/2008/12/earmark#hasContent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#JazzMusician",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Jazz"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Musician"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#boxerpos",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Musician",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#boxerpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_19_41_american+jazz+musician",
+    "@type": [
+      "http://www.essepuntato.it/2008/12/earmark#PointerRange"
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#AmericanJazzMusician"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#begins": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "19"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#ends": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "41"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#refersTo": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "american jazz musician"
+      },
+      {
+        "@value": "American Jazz Musician"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.essepuntato.it/2008/12/earmark#begins",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.essepuntato.it/2008/12/earmark#refersTo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  }
+]
+

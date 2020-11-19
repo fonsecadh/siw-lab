@@ -1,0 +1,789 @@
+[
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#the_new_york_times_1",
+    "@type": [
+      "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#The_new_york_times"
+    ],
+    "http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasQuantifier": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasQuality",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/vn/abox/role/Theme",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#equivalentClass",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_81_89_language",
+    "@type": [
+      "http://www.essepuntato.it/2008/12/earmark#PointerRange"
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Lisp"
+      },
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#language_1"
+      }
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Language"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#begins": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "81"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#ends": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "89"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#refersTo": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"
+      }
+    ],
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "language"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasDeterminer",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/cnlp/dependencies.owl#other_coref",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_47_51_died",
+    "@type": [
+      "http://www.essepuntato.it/2008/12/earmark#PointerRange"
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#die_1"
+      }
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Die"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#begins": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "47"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#ends": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "51"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#refersTo": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"
+      }
+    ],
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VBD"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "died"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_56_64_invented",
+    "@type": [
+      "http://www.essepuntato.it/2008/12/earmark#PointerRange"
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#invent_1"
+      }
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Invent"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#begins": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "56"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#ends": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "64"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#refersTo": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"
+      }
+    ],
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VBD"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "invented"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.essepuntato.it/2008/12/earmark#ends",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse",
+    "@type": [
+      "http://www.essepuntato.it/2008/12/earmark#StringDocuverse"
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#hasContent": [
+      {
+        "@value": "The_New_York_Times reported that John_McCarthy died. He invented the programming language LISP."
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#possibleType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasQuantifier",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_69_80_programming",
+    "@type": [
+      "http://www.essepuntato.it/2008/12/earmark#PointerRange"
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Lisp"
+      },
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#programming_1"
+      }
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Programming"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#begins": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "69"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#ends": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "80"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#refersTo": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"
+      }
+    ],
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "programming"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Lisp",
+    "@type": [
+      "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ProgrammingLanguage"
+    ],
+    "http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#possibleType": [
+      {
+        "@id": "http://www.w3.org/2002/07/owl#Thing"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#sameAs": [
+      {
+        "@id": "http://dbpedia.org/resource/Lisp_(programming_language)"
+      }
+    ]
+  },
+  {
+    "@id": "http://dbpedia.org/resource/The_New_York_Times",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://schema.org/CreativeWork"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Invent",
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#boxerpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/vn/data/Invent_26030100"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_0_18_The_New_York_Times",
+    "@type": [
+      "http://www.essepuntato.it/2008/12/earmark#PointerRange"
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#the_new_york_times_1"
+      }
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#The_new_york_times"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#begins": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "0"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#ends": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "18"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#refersTo": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"
+      }
+    ],
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNS"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "The_New_York_Times"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_53_55_He",
+    "@type": [
+      "http://www.essepuntato.it/2008/12/earmark#PointerRange"
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Male"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#begins": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "53"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#ends": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "55"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#refersTo": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"
+      }
+    ],
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#PRP"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "He"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/vn/abox/role/Agent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_69_89_programming+language",
+    "@type": [
+      "http://www.essepuntato.it/2008/12/earmark#PointerRange"
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ProgrammingLanguage"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#begins": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "69"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#ends": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "89"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#refersTo": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "programming language"
+      },
+      {
+        "@value": "Programming Language"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#invent_1",
+    "@type": [
+      "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Invent"
+    ],
+    "http://www.ontologydesignpatterns.org/ont/vn/abox/role/Agent": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#John_mccarthy"
+      }
+    ],
+    "http://www.ontologydesignpatterns.org/ont/vn/abox/role/Product": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Lisp"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_90_94_LISP",
+    "@type": [
+      "http://www.essepuntato.it/2008/12/earmark#PointerRange"
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Lisp"
+      }
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Language"
+      },
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Programming"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#begins": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "90"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#ends": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "94"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#refersTo": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"
+      }
+    ],
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNP"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "LISP"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.essepuntato.it/2008/12/earmark#hasContent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Programming",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#boxerpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_19_27_reported",
+    "@type": [
+      "http://www.essepuntato.it/2008/12/earmark#PointerRange"
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#report_1"
+      }
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Report"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#begins": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "19"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#ends": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "27"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#refersTo": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"
+      }
+    ],
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VBD"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "reported"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#programming_1",
+    "@type": [
+      "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Programming"
+    ],
+    "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Lisp"
+      }
+    ],
+    "http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasDeterminer": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Language",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#boxerpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#boxerpos",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_33_46_John_McCarthy",
+    "@type": [
+      "http://www.essepuntato.it/2008/12/earmark#PointerRange"
+    ],
+    "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#John_mccarthy"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#begins": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "33"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#ends": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "46"
+      }
+    ],
+    "http://www.essepuntato.it/2008/12/earmark#refersTo": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"
+      }
+    ],
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNP"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "John_McCarthy"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#John_mccarthy",
+    "http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#possibleType": [
+      {
+        "@id": "http://xmlns.com/foaf/0.1/Person"
+      }
+    ],
+    "http://www.ontologydesignpatterns.org/ont/cnlp/dependencies.owl#other_coref": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#invent_1"
+      }
+    ],
+    "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasQuality": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Male"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#sameAs": [
+      {
+        "@id": "http://dbpedia.org/resource/John_McCarthy_(computer_scientist)"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#die_1",
+    "@type": [
+      "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Die"
+    ],
+    "http://www.ontologydesignpatterns.org/ont/vn/abox/role/Theme": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#John_mccarthy"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Die",
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#boxerpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/vn/data/Die_48020000"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ProgrammingLanguage",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Programming"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Language"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "http://dbpedia.org/resource/Programming_language"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#The_new_york_times",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#boxerpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "http://dbpedia.org/resource/The_New_York_Times"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#report_1",
+    "@type": [
+      "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Report"
+    ],
+    "http://www.ontologydesignpatterns.org/ont/vn/abox/role/Agent": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#the_new_york_times_1"
+      }
+    ],
+    "http://www.ontologydesignpatterns.org/ont/vn/abox/role/Theme": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#die_1"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/vn/abox/role/Product",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.essepuntato.it/2008/12/earmark#begins",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Male",
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#boxerpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.essepuntato.it/2008/12/earmark#refersTo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Report",
+    "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#boxerpos": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/ont/vn/data/Report_29090100"
+      }
+    ]
+  }
+]
+
+
