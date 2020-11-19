@@ -48,7 +48,7 @@
 \author{Hugo Fonseca Díaz\\ \email{uo258318@uniovi.es}}
 \affil{Escuela de Ingeniería Informática. Universidad de Oviedo.}
 \maketitle
-% Ejercicio 1
+% Información estructurada
 \section{Información estructurada}
 En esta primera sección se obtendrá información estructurada de tres textos mediante el uso de tipos definidos en \verb|schema.org| \cite{schemaorg}. Dicha información se define a continuación:
 
@@ -103,6 +103,7 @@ En esta primera sección se obtendrá información estructurada de tres textos m
             \item \verb|url|: \url{https://www.wikidata.org/wiki/Q132874}
         \end{itemize}
 \end{itemize}
+% Modelado RDF
 \section{Modelado RDF}
 En esta sección se muestra el modelado \textit{RDF} en formato \textit{Turtle} con el que se ha representado la información listada previamente. Dicho modelado es el siguiente:
 
@@ -174,6 +175,7 @@ En la \textbf{Figura 1} se observa el output de la herramienta \textit{RDFShape}
 \centering
 \includegraphics[width=\textwidth]{google_jsonld}
 \end{figure}
+% Obtención automática de información estructurada
 \section{Obtención automática de información estructurada}
 En esta parte del documento se procederá a obtener información estructurada mediante el uso de varias herramientas. Estas son \textit{Intelligent Tagging} de \textit{PermID} \cite{permid}, \textit{DBpedia Spotlight} \cite{dbpedia} y \textit{FRED} \cite{fred}.
 
@@ -196,6 +198,25 @@ A continuación se muestra una serie de ejemplos en forma de capturas de pantall
 \centering
 \includegraphics[width=\textwidth]{fred_3}
 \end{figure}
+% Cuestiones sobre la obtención automática de información estructurada
+\section{Cuestiones sobre la obtención automática de información estructurada}
+En esta última sección se responderá a una serie de cuestiones relacionadas con la obtención automática de información semántica. Dichas cuestiones tratan sobre las herramientas utilizadas pero también sobre temas más generales como la creación y similitud de ontologías.
+
+\subsection{¿Qué ontologías usa cada servicio para "tipar" las instancias detectadas en el texto?}
+TODO
+
+\subsection{¿Existe algún tipo de dichas ontologías que pudiera considerarse equivalente a otro tipo en \textit{schema.org}?}
+TODO
+
+\subsection{Reflexión sobre los motivos por los cuales un equipo de desarrollo crea su propia ontología}
+En el campo de la web semántica la necesidad de crear una ontología estándar es algo tremendamente importante. Esto se debe al objetivo principal de la Web Semántica, el hacer de la Web un enorme grafo de conocimiento entendible por máquinas. Por ello, cuantos mas datos estén marcados con una misma ontología, mas sencillo sera relacionarlos. Sin embargo, debido a la naturaleza heterogénea de la Web, la creación de esta ontología estándar no es tarea sencilla, puesto que hay tal nivel de especificación de algunos datos que pretender cubrir la Web entera con marcados muy detallados se convierte en algo muy complejo.
+
+Es por esto que muchos equipos deciden crear su propia ontología, para poder especializar más el marcado de los datos y no quedarse en la generalidad de esa ontología universal, dotándolos de mayor riqueza. No obstante, no todo son ventajas, al haber creado una ontología nueva se podrán marcar ciertos datos con mayor riqueza, pero esto hace que no pueda alinearse correctamente con otras ontologías, y por lo tanto es probable que acabe en desuso o usada por equipos muy pequeños.
+
+En resumen, aunque la creación de una ontología estándar se enfrente a grandes retos, es necesaria para garantizar su propia longevidad y esto a su vez atraerá a desarrolladores a utilizarla o a alinearla con sus propias ontologías, de forma que se construya de manera colaborativa.
+
+\subsection{Equivalencias entre ontologías}
+TODO
 % Bibliografía
 \begin{thebibliography}{8}
 \bibitem{schemaorg}
