@@ -1,8 +1,7 @@
 \BOOKMARK [1][-]{section.1}{Informaci\363n estructurada}{}% 1
 \BOOKMARK [1][-]{section.2}{Modelado RDF}{}% 2
 \BOOKMARK [1][-]{section.3}{Obtenci\363n autom\341tica de informaci\363n estructurada}{}% 3
-\BOOKMARK [1][-]{section.4}{Cuestiones sobre la obtenci\363n autom\341tica de informaci\363n estructurada}{}% 4
+\BOOKMARK [1][-]{section.4}{Cuestiones sobre la obtenci\363n autom\341tica}{}% 4
 \BOOKMARK [2][-]{subsection.4.1}{\277Qu\351 ontolog\355as usa cada servicio para "tipar"las instancias detectadas en el texto?}{section.4}% 5
 \BOOKMARK [2][-]{subsection.4.2}{\277Existe alg\372n tipo de dichas ontolog\355as que pudiera considerarse equivalente a otro tipo en schema.org?}{section.4}% 6
 \BOOKMARK [2][-]{subsection.4.3}{Reflexi\363n sobre los motivos por los cuales un equipo de desarrollo crea su propia ontolog\355a}{section.4}% 7
-\BOOKMARK [2][-]{subsection.4.4}{Equivalencias entre ontolog\355as}{section.4}% 8
