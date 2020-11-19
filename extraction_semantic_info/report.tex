@@ -161,16 +161,28 @@ wikidata:Q132874 rdf:type schema:ComputerLanguage ;
     schema:name "LISP" .
 \end{lstlisting}
 
-En la \textbf{Figura 1} se observa el output de la herramienta \textit{RDFShape} al introducir el fichero en formato \textit{Turtle}. Se observa que el fichero está bien formado.
+En la \textbf{Figura 1} se observa el output de la herramienta \textit{RDFShape} al introducir el fichero en formato \textit{Turtle}. Se observa que el fichero está bien formado. Una vez hecho eso, convertimos el fichero a \textit{JSON-LD} mediante el uso de la herramienta \textit{RDF Translator} \cite{rdftranslator}. En la \textbf{Figura 2} se puede ver la validación de la \textit{Google Structured Data Testing Tool} \cite{googlesdtt} sobre el \textit{JSON-LD} generado previamente.
 
 \begin{figure}[h]
 \caption{Validación del fichero \textit{Turtle} mediante la herramienta \textit{RDFShape}.}
 \centering
 \includegraphics[width=\textwidth]{weso_turtle}
 \end{figure}
+
+\begin{figure}[h]
+\caption{Validación del fichero \textit{JSON-LD} mediante la herramienta \textit{Google Structured Data Testing Tool}.}
+\centering
+\includegraphics[width=\textwidth]{google_jsonld}
+\end{figure}
 % Bibliografía
 \begin{thebibliography}{8}
 \bibitem{schemaorg}
 Página de \textit{Schema.org}, \url{https://schema.org/}. Última vez accedido 19 de noviembre de 2020.        
+
+\bibitem{rdftranslator}
+Página del \textit{RDF Translator}, \url{https://rdf-translator.appspot.com/}. Última vez accedido 19 de noviembre de 2020.
+
+\bibitem{googlesdtt}
+Página de la \textit{Google Structured Data Testing Tool}, \url{https://search.google.com/structured-data/testing-tool/}. Última vez accedido 19 de noviembre de 2020.
 \end{thebibliography}
 \end{document}
