@@ -29,14 +29,16 @@
 \maketitle
 % Objetivo
 \section{Objetivo}
-El objetivo de esta práctica es crear un clasificador que realice predicciones de si el índice bursátil \textit{Dow Jones} va a subir o a bajar según una serie de noticas internacionales registradas ese día. Para crear dicho clasificador usaremos la herramienta \textit{Orange} \cite{orange}.
+El objetivo de esta práctica es crear un clasificador que realice predicciones de las bajadas o subidas del índice bursátil \textit{Dow Jones} según una serie de noticas internacionales registradas ese día. Para crear dicho clasificador se usará la herramienta \textit{Orange} \cite{orange}.
 % Diseño
 \section{Diseño}
-Para dicho clasificador se ha creado un corpus formado por los datos extraídos de una hoja de cálculo. Al preprocesarse dicho corpus se le añade una lista de palabras vacías incluidas en el fichero \textit{stopwords.txt} creado por nosotros. Después se crea una bolsa de palabras con una frecuencia de términos y un cálculo del IDF. Dicha bolsa se conecta con varios modelos que a su vez muestran los resultados de sus cálculos en un nanograma. Este nanograma nos muestra las palabras más importantes a la hora de clasificar si una noticia hará que el índice \textit{Dow Jones} baje o suba.
-
+Para dicho clasificador se ha creado un corpus formado por los datos extraídos de una hoja de cálculo. Al preprocesarse dicho corpus se le añade una lista de palabras vacías incluidas en el fichero \textit{stopwords.txt} manualmente creado. Después se forma una bolsa de palabras con una frecuencia de términos y un cálculo del IDF. Dicha bolsa se conecta con varios modelos que a su vez muestran los resultados de sus cálculos en un namograma. Este namograma muestra las palabras más importantes a la hora de clasificar si una noticia hará que el índice \textit{Dow Jones} baje o suba. Además, la bolsa de palabras y el modelo con el que se ha decidido clasificar, el \textit{bosque aleatorio}, se conectan a un nodo que prueba y evalua el clasificador.
 % Resultados
 \section{Resultados}
-Una vez observados los nanogramas obtenidos, probamos y clasificamos los diferentes modelos. La regresión logística nos da un porcentaje de acierto por debajo del 30\% (sobre el 28\%). El bayesiano ingenuo nos da un porcentaje de acierto de casi el 50\% (sobre un 49\%). 
+Una vez observados los namogramas obtenidos, se prueban y clasifican los diferentes modelos. La regresión logística muestra un porcentaje de acierto por debajo del 30\% (sobre el 28\%). El bayesiano ingenuo obtiene un porcentaje de acierto de casi el 50\% (sobre un 49\%). Al probar con otros modelos se ha llegado a la conclusión de que el mejor de ellos es el \textit{bosque aleatorio}, con un porcentaje de acierto de algo mas del 50\%. Al no poder visualizarlo con un namograma no se puede observar que términos considera más importantes, por lo que simplemente se observa el resultado de las pruebas mediante una matriz de confusión.
+% Conclusión
+\section{Conclusión}
+Al analizar los resultados experimentales se observa una tasa de acierto demasiado baja, un 50\% no es un porcentaje lo suficientemente grande como para considerar utilizar dicho clasificador para una tarea como la presente. Este porcentaje tan bajo puede explicarse por varios factores. El primero es que quizás los datos otorgados no son lo suficientemente significativos como para resolver el problema, por lo que quizás habría que buscar un mejor dataset. El segundo es debido al propio funcionamiento del índice bursátil, ya que al ser tan complejo no se puede asegurar que haya una relación de causalidad entre el tipo de noticias y la subida o bajada del mismo.
 % Bibliografía
 \begin{thebibliography}{8}
 \bibitem{orange}
