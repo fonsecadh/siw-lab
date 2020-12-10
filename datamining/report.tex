@@ -1,0 +1,47 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{parskip}
+\usepackage[colorlinks=true,urlcolor=Blue,linkcolor=black,citecolor=black]{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{fancyhdr}
+\usepackage{csquotes}
+\usepackage{lastpage}
+\usepackage{array}
+\usepackage{listings}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\usepackage[affil-it]{authblk}
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+\usepackage[hmargin=2cm,top=4cm,headheight=65pt,footskip=65pt]{geometry}
+
+% Documento
+\begin{document}
+% Título
+\title{SIW PL11-12. Datamining.}
+\author{Hugo Fonseca Díaz\\ \email{uo258318@uniovi.es}}
+\affil{Escuela de Ingeniería Informática. Universidad de Oviedo.}
+\maketitle
+% Objetivo
+\section{Objetivo}
+El objetivo de esta práctica es crear un clasificador que realice predicciones de si el índice bursátil \textit{Dow Jones} va a subir o a bajar según una serie de noticas internacionales registradas ese día. Para crear dicho clasificador usaremos la herramienta \textit{Orange} \cite{orange}.
+% Diseño
+\section{Diseño}
+Para dicho clasificador se ha creado un corpus formado por los datos extraídos de una hoja de cálculo. Al preprocesarse dicho corpus se le añade una lista de palabras vacías incluidas en el fichero \textit{stopwords.txt} creado por nosotros. Después se crea una bolsa de palabras con una frecuencia de términos y un cálculo del IDF. Dicha bolsa se conecta con varios modelos que a su vez muestran los resultados de sus cálculos en un nanograma. Este nanograma nos muestra las palabras más importantes a la hora de clasificar si una noticia hará que el índice \textit{Dow Jones} baje o suba.
+
+% Resultados
+\section{Resultados}
+Una vez observados los nanogramas obtenidos, probamos y clasificamos los diferentes modelos. La regresión logística nos da un porcentaje de acierto por debajo del 30\% (sobre el 28\%). El bayesiano ingenuo nos da un porcentaje de acierto de casi el 50\% (sobre un 49\%). 
+% Bibliografía
+\begin{thebibliography}{8}
+\bibitem{orange}
+Página de \textit{Orange}, \url{https://orange.biolab.si/}. Última vez accedido 10 de diciembre de 2020.        
+\end{thebibliography}
+\end{document}
+
+
