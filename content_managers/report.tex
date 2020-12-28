@@ -1,0 +1,47 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{parskip}
+\usepackage[colorlinks=true,urlcolor=Blue,linkcolor=black,citecolor=black]{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{fancyhdr}
+\usepackage{csquotes}
+\usepackage{lastpage}
+\usepackage{array}
+\usepackage{listings}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\usepackage[affil-it]{authblk}
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+\usepackage[hmargin=2cm,top=4cm,headheight=65pt,footskip=65pt]{geometry}
+
+% Documento
+\begin{document}
+% Título
+\title{SIW PL14. Gestores de contenidos.}
+\author{Hugo Fonseca Díaz\\ \email{uo258318@uniovi.es}}
+\affil{Escuela de Ingeniería Informática. Universidad de Oviedo.}
+\maketitle
+% Objetivo
+\section{Objetivo}
+El objetivo de esta práctica era el crear un sitio web de estilo académico en WordPress. Dicho sitio web debía estar desplegado en Docker utilizando Docker Swarm y Docker Compose, y debía estar enlazado con un servicio de \textit{elasticsearch} también desplegado en Docker.
+% Contenido del sitio web
+\section{Contenido del sitio web}
+El sitio web está dividido en seis apartados. Dichos apartados están listados a continuación:
+\begin{itemize}
+    \item \textbf{Home:} página de inicio con información personal del investigador y una foto suya. 
+    \item \textbf{Investigación:} muestra los temas principales en los que se basa la investigación del investigador. 
+    \item \textbf{Publicaciones:} muestra los artículos, libros y papers publicados por el investigador. 
+    \item \textbf{Ponencias:} muestra las charlas o conferencias impartidas por el investigador. 
+    \item \textbf{Enseñanza:} muestra los cursos que imparte actualmente el investigador, así como información general de las materias que impartió a lo largo de su carrera. Tambíen muestra su horario para las tutorías con los alumnos.  
+    \item \textbf{Contacto:} muestra la información de contacto del investigador.  
+\end{itemize}
+% Vídeo explicativo
+\section{Vídeo explicativo}
+Se ha creado un vídeo explicando las secciones del sitio web introducidas previamente, así como otras cuestiones de interés sobre la construcción del mismo. Dicho vídeo está disponible en \url{https://web.microsoftstream.com/video/40c884b9-fb9f-4e45-a2c4-d5540fffc91f}.
+\end{document}
